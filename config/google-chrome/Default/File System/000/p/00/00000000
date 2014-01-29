@@ -1,9 +1,0 @@
-03:00:46 GMT-0500 (EST) (ERROR) /background.html: Couldn't contact either bootstrap server. Using what we've got...
-    at LogReceiver.error (/js/common/Log.js:8:267)
-    at b (/js/common/Bootstrap.js:2:470)
-03:00:56 GMT-0500 (EST) (WARN) /background.html: chrome tabs query did not return a result while changing window focus
-    at LogReceiver.warn (/js/common/Log.js:8:386)
-    at Object.callback (/js/main/Extension.js:15:62)
-    at Function.target.(anonymous function) (extensions::SafeBuiltins:19:14)
-    at safeCallbackApply (extensions::sendRequest:21:15)
-    at handleResponse (extensions::sendRequest:76:7)
