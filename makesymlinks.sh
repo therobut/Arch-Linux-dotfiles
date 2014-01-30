@@ -40,11 +40,11 @@ ln -s $dir/awesome ~/.config/awesome
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
-    # Clone my oh-my-zsh repository from GitHub only if it isn't already present
-#DISABLED THIS FOR NOW - My repo uses the official oh-my-zsh repo as a submodule
-#    if [[ ! -d $dir/oh-my-zsh/ ]]; then
-#        git clone http://github.com/michaeljsmalley/oh-my-zsh.git
-#    fi
+    # Clone official oh-my-zsh repository from GitHub only if it isn't already present
+    if [[ ! -d $dir/oh-my-zsh/ ]]; then
+        git submodule init
+        git submodule update
+    fi
     # Set the default shell to zsh if it isn't currently set to zsh
     if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
         chsh -s $(which zsh)
