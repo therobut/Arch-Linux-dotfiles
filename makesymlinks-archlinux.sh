@@ -31,6 +31,12 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+# Check if .config exists, created if not. Symlinks the awesome config folder
+if [[ ! -d ~/.config ]]; then
+    mkdir ~/.config
+fi
+ln -s $dir/awesome ~/.config/awesome
+
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
@@ -50,10 +56,6 @@ else
     if [[ $platform == 'Linux' ]]; then
         sudo pacman -S zsh
         install_zsh
-    # If the platform is OS X, tell the user to install zsh :)
-    elif [[ $platform == 'Darwin' ]]; then
-        echo "Please install zsh, then re-run this script!"
-        exit
     fi
 fi
 }
