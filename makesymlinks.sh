@@ -1,11 +1,8 @@
-#####
-#### NEEDS TO BE MODIFIED. NOT READY FOR USE
-#####
-
 #!/bin/bash
 ############################
 # .make.sh
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
+# Assumes 'sudo' is installed
 ############################
 
 ########## Variables
@@ -50,7 +47,7 @@ else
     platform=$(uname);
     # If the platform is Linux, try an apt-get to install zsh and then recurse
     if [[ $platform == 'Linux' ]]; then
-        sudo apt-get install zsh
+        sudo pacman -S zsh
         install_zsh
     # If the platform is OS X, tell the user to install zsh :)
     elif [[ $platform == 'Darwin' ]]; then
