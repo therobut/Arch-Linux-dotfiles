@@ -1,10 +1,16 @@
 #Robut's linux dot files
 
-Pretty self-explanatory. Just run makesymlinks-archlinux.sh
+Pretty self-explanatory. Just run makesymlinks.sh.
 
-Other versions of makesymlinks-<distro>.sh are coming soon.
+makesymlinks.sh assumes you are on Arch Linux, and will
+automatically try to install zsh if it is not already present.
 
-##Coming Soon
+To avoid errors, make sure zsh is already installed, if on a
+distro other than Arch Linux.
 
-Instructions for cloning Oh-My-ZSH as a submodule
+Compatibility for more distros is coming soon.
 
+###Coming Soon
+
+* Instructions for cloning Oh-My-ZSH as a submodule
+* Compatibility for more distros in makesymlinks.sh
