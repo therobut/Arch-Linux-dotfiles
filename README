@@ -11,9 +11,6 @@ Other versions of makesymlinks-<distro>.sh are coming soon.
 -- Known Issues --
 ------------------
 
-Need to add a symlink for the awesome config folder to the makesymlinks script.
- -Temporary fix is to manually create a symlink to it.
-  EXAMPLE:   $ ln -s ~/dotfiles/awesome ~/.config/
+Need to write instructions for cloning Oh-My-ZSH as a submodule
 
-Need to remove 'oh-my-zsh' and add the official repository as a submodule.
-It works as-is, but it cannot be easily updated currently.
+Need to make scripts for other distros
