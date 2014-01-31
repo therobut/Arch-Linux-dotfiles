@@ -26,16 +26,21 @@ echo "done"
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
+    mv ~/.$file $olddir
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
 
 # Check if .config exists, created if not. Symlinks the awesome config folder
-if [[ ! -d ~/.config ]]; then
-    mkdir ~/.config
+if [[ -d ~/.config/awesome ]]; then
+    mv ~/.config/awesome $olddir
+    ln -s $dir/awesome ~/.config/awesome
+else
+    if [[ ! -d ~/.config ]]; then 
+        mkdir ~/.config
+    fi
+    ln -s $dir/awesome ~/.config/awesome
 fi
-ln -s $dir/awesome ~/.config/awesome
 
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
