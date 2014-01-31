@@ -1,4 +1,7 @@
 #Robut's Linux dot files
+This is just a collection of my user specific configuration files (not system-wide settings).
+I created this repository more for my own convenience than anything,
+but I will try to provide limited support if you need it.
 ##Installation
 Just clone the git repository into your home folder.
 ``` bash
