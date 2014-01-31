@@ -6,6 +6,12 @@ cd ~
 git clone git://github.com/therobut/dotfiles.git
 ```
 Pretty self-explanatory. Just run makesymlinks.sh.
+Example:
+``` bash
+cd ~/dotfiles
+chmod +x makesymlinks.sh
+./makesymlinks.sh
+```
 
 makesymlinks.sh assumes you are on Arch Linux, and will
 automatically try to install zsh if it is not already present.
