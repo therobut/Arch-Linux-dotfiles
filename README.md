@@ -19,7 +19,7 @@ chmod +x makesymlinks.sh
 makesymlinks.sh assumes you are on Arch Linux, and will
 automatically try to install zsh if it is not already present.
 
-To avoid errors, make sure zsh is already installed, if on a
+To avoid errors, make sure zsh is already installed if on a
 distro other than Arch Linux.
 
 Compatibility for more distros is coming soon.
