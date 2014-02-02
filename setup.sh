@@ -34,6 +34,8 @@ echo "done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 for file in $files; do
+
+    #config files for Awesome window manager need to be in ~/.config
     if [ $file == 'awesome' ]; then
          if [[ -d ~/.config/awesome ]]; then
             mv ~/.config/awesome $olddir
@@ -43,6 +45,7 @@ for file in $files; do
             fi
          ln -s $dir/awesome ~/.config/awesome
          fi
+    #dotfiles that belong in home directory
     else
         echo "Moving any existing dotfiles from ~ to $olddir"
         mv ~/.$file $olddir
@@ -52,37 +55,40 @@ for file in $files; do
 done
 
 install_zsh () {
-# Test to see if zshell is installed.  If it is:
-if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
+
+    #initialize and clone oh-my-zsh repository as submodule
     git submodule init
     git submodule update
-    # Set the default shell to zsh if it isn't currently set to zsh
-    if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
-        chsh -s $(which zsh)
+
+    # Test to see if zshell is installed.  If it is:
+    if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
+        # Set the default shell to zsh if it isn't currently set to zsh
+        if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+            chsh -s $(which zsh)
+        fi
+    else
+        # If zsh isn't installed, get the platform of the current machine
+        platform=$(uname);
+        # If the platform is Linux, try an apt-get to install zsh and then recurse
+        if [[ $platform == 'Linux' ]]; then
+            case $NAME in
+                'Arch Linux')
+                    sudo pacman -S zsh
+                    ;;
+                'Ubuntu')
+                    sudo apt-get install zsh
+                    ;;
+                'Debian')
+                    sudo apt-get install zsh
+                    ;;
+                *)
+                    echo 'zsh could not be installed. Please install zsh manually.'
+                    return
+                    ;;
+            esac
+            install_zsh
+        fi
     fi
-else
-    # If zsh isn't installed, get the platform of the current machine
-    platform=$(uname);
-    # If the platform is Linux, try an apt-get to install zsh and then recurse
-    if [[ $platform == 'Linux' ]]; then
-        case $NAME in
-            'Arch Linux')
-                sudo pacman -S zsh
-                ;;
-            'Ubuntu')
-                sudo apt-get install zsh
-                ;;
-            'Debian')
-                sudo apt-get install zsh
-                ;;
-            *)
-                print 'zsh could not be installed. Please install zsh manually.'
-                return
-                ;;
-        esac
-        install_zsh
-    fi
-fi
 }
 
 install_zsh
