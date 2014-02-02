@@ -8,30 +8,22 @@ Just clone the git repository into your home folder.
 cd ~
 git clone git://github.com/therobut/dotfiles.git
 ```
-Pretty self-explanatory. Just run makesymlinks.sh.
+Pretty self-explanatory. Just run setup.sh.
 Example:
 ``` bash
 cd ~/dotfiles
-chmod +x makesymlinks.sh
-./makesymlinks.sh
+chmod +x setup.sh
+./setup.sh
 ```
 
-makesymlinks.sh assumes you are on Arch Linux, and will
-automatically try to install zsh if it is not already present.
-
-To avoid errors, make sure zsh is already installed if on a
-distro other than Arch Linux.
-
-Compatibility for more distros is coming soon.
-
-###Optional: Installing oh-my-zsh
-oh-my-zsh is already registered as a git submodule in my repository.
-Installing it is simple. For example:
-``` bash
-cd ~/dotfiles
-git submodule init
-git submodule update
-```
-
-##Coming Soon
-* Compatibility for more distros in makesymlinks.sh
+###Compatibility for other Linux distributions
+setup.sh tries to automatically detect which distribution you are running, and automatically
+install zsh by using the apropriate package manager. If setup.sh does not automatically install zsh and
+you would like me to add support for your distro, help me out by sending me the following information.
+* Command to install zsh via your package manager (ex: $sudo apt-get install zsh)
+* Contents of '/etc/os-release'
+If '/etc/os-release' does not exist, or is empty, then you might be out of luck. You can still mention to me
+which distro you are on, and I will try to add it in my spare time. Please note that this script is not 
+something I work on very often. Therefore if I have to do a lot of the research for a distro on my own, it may
+be quite a while before compatibility is added, if ever. That said, I do enjoy testing new distros, so I will 
+probably get around to it sooner or later.
