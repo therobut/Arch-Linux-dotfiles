@@ -22,8 +22,11 @@ install zsh by using the apropriate package manager. If setup.sh does not automa
 you would like me to add support for your distro, help me out by sending me the following information.
 * Command to install zsh via your package manager (ex: $sudo apt-get install zsh)
 * Contents of '/etc/os-release'
+
 If '/etc/os-release' does not exist, or is empty, then you might be out of luck. You can still mention to me
-which distro you are on, and I will try to add it in my spare time. Please note that this script is not 
+which distro you are on, and I will try to add it in my spare time. 
+
+Please note that this script is not 
 something I work on very often. Therefore if I have to do a lot of the research for a distro on my own, it may
 be quite a while before compatibility is added, if ever. That said, I do enjoy testing new distros, so I will 
 probably get around to it sooner or later.
