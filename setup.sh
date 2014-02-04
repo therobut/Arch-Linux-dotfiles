@@ -16,9 +16,6 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="awesome vim vimrc Xdefaults xinitrc zshrc"    # list of files/folders to symlink in homedir
 
-if [ -f /etc/os-release ]; then
-    source /etc/os-release
-fi
 
 ##########
 
@@ -60,6 +57,8 @@ install_zsh () {
     git submodule init
     git submodule update
 
+
+
     # Test to see if zshell is installed.  If it is:
     if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
         # Set the default shell to zsh if it isn't currently set to zsh
@@ -71,6 +70,12 @@ install_zsh () {
         platform=$(uname);
         # If the platform is Linux, try an apt-get to install zsh and then recurse
         if [[ $platform == 'Linux' ]]; then
+           
+            #try to find which linux distro user is running
+            if [ -f /etc/os-release ]; then
+                source /etc/os-release
+            fi
+            
             case $NAME in
                 'Arch Linux')
                     sudo pacman -S zsh
