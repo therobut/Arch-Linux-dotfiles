@@ -14,7 +14,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="awesome vim vimrc Xdefaults xinitrc zshrc"    # list of files/folders to symlink in homedir
+files="awesome i3 vim vimrc Xdefaults xinitrc zshrc"    # list of files/folders to symlink in homedir
 
 
 ##########
