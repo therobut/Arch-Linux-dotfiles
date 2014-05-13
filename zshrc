@@ -10,6 +10,7 @@ ZSH_THEME="bira"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias aur="yaourt"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
