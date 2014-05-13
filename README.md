@@ -18,8 +18,9 @@ chmod +x setup.sh
 
 ###Compatibility for other Linux distributions
 setup.sh tries to automatically detect which distribution you are running, and automatically
-install zsh by using the apropriate package manager. If setup.sh does not automatically install zsh and
-you would like me to add support for your distro, help me out by sending me the following information.
+install zsh by using the apropriate package manager. If setup.sh does not automatically install zsh, feel free
+to fork the repo and send me a pull request with the updated code. If you would like ME to 
+add support for your distro, help me out by sending me the following information.
 * Command to install zsh via your package manager (ex: $sudo apt-get install zsh)
 * Contents of '/etc/os-release'
 
