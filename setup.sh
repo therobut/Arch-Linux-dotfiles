@@ -68,7 +68,7 @@ install_zsh () {
     else
         # If zsh isn't installed, get the platform of the current machine
         platform=$(uname);
-        # If the platform is Linux, try an apt-get to install zsh and then recurse
+        # If the platform is Linux, try to install zsh and then recurse
         if [[ $platform == 'Linux' ]]; then
            
             #try to find which linux distro user is running
@@ -81,7 +81,7 @@ install_zsh () {
                     sudo pacman -S zsh
                     ;;
                 'Ubuntu')
-                    sudo apt-get install zsh
+                    sudo aptitude install zsh
                     ;;
                 'Debian')
                     sudo apt-get install zsh
