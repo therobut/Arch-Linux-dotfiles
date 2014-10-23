@@ -69,3 +69,9 @@ export GOPATH=$HOME/gocode
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# Automatically add ssh key to ssh-agent if it's not already there.
+AGENT_STRING=$(ssh-add -l | cat -)
+if [[ $AGENT_STRING != *.ssh/id_rsa* ]] then
+    ssh-add
+fi
+#echo $AGENT_STRING
