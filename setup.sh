@@ -20,13 +20,14 @@ files="i3 vim vimrc Xdefaults xinitrc zshrc zprofile"    # list of files/folders
 ##########
 
 # create dotfiles_old in homedir
-echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
+echo -n "Creating $olddir for backup of any existing dotfiles in ~ ... "
 mkdir -p $olddir
 echo "done"
 
 # change to the dotfiles directory
-echo -n "Changing to the $dir directory ..."
+echo -n "Changing to the $dir directory ... "
 cd $dir
+echo "done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 for file in $files; do
@@ -43,20 +44,23 @@ for file in $files; do
             mv ~/.config/i3status $olddir
         fi
 
-        echo "Creating symlink to config/i3/config in home directory."
+        echo -n "Creating symlink to config/i3/config in home directory ... "
         ln -s $dir/config/i3 ~/.config/i3
-        echo "Creating symlink to config/i3status/config in home directory."
+        echo "done"
+        echo -n "Creating symlink to config/i3status/config in home directory ... "
         ln -s $dir/config/i3status ~/.config/i3status
+        echo "done"
 
     #dotfiles that belong in home directory
     else
         mv ~/.$file $olddir
-        echo "Creating symlink to $file in home directory."
+        echo -n "Creating symlink to $file in home directory ... "
         ln -s $dir/$file ~/.$file
+        echo "done"
     fi
 done
 
-echo "Pre-existing dotfiles were backed up to ~/$olddir"
+echo "Pre-existing dotfiles were backed up to ~$olddir"
 
 install_zsh () {
 
