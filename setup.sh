@@ -27,29 +27,36 @@ echo "done"
 # change to the dotfiles directory
 echo -n "Changing to the $dir directory ..."
 cd $dir
-echo "done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 for file in $files; do
 
-    #config files for Awesome window manager need to be in ~/.config
-    if [ $file == 'awesome' ]; then
-         if [[ -d ~/.config/awesome ]]; then
-            mv ~/.config/awesome $olddir
-         else
-            if [[ ! -d ~/.config ]]; then 
-                mkdir ~/.config
-            fi
-         ln -s $dir/awesome ~/.config/awesome
-         fi
+    #config files for i3 window manager need to be in ~/.config
+    if [[ ! -d ~/.config ]]; then
+        mkdir ~/.config
+    fi
+    if [ $file == 'i3' ]; then
+        if [[ -d ~/.config/i3 ]]; then
+            mv ~/.config/i3 $olddir
+        fi
+        if [[ -d ~/.config/i3status ]]; then
+            mv ~/.config/i3status $olddir
+        fi
+
+        echo "Creating symlink to config/i3/config in home directory."
+        ln -s $dir/config/i3 ~/.config/i3
+        echo "Creating symlink to config/i3status/config in home directory."
+        ln -s $dir/config/i3status ~/.config/i3status
+
     #dotfiles that belong in home directory
     else
-        echo "Moving any existing dotfiles from ~ to $olddir"
         mv ~/.$file $olddir
         echo "Creating symlink to $file in home directory."
         ln -s $dir/$file ~/.$file
     fi
 done
+
+echo "Pre-existing dotfiles were backed up to ~/$olddir"
 
 install_zsh () {
 
@@ -62,7 +69,7 @@ install_zsh () {
     # Test to see if zshell is installed.  If it is:
     if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
         # Set the default shell to zsh if it isn't currently set to zsh
-        if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+        if [[ $(echo $SHELL) != $(which zsh) ]]; then
             chsh -s $(which zsh)
         fi
     else
