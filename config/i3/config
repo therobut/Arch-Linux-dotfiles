@@ -23,6 +23,14 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Media Keys
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5- unmute
+bindsym XF86AudioMute exec amixer -q set Master mute
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 #lock screen
 bindsym $mod+Control+l exec i3lock
 
