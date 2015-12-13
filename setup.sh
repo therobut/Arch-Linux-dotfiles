@@ -62,11 +62,17 @@ done
 
 echo "Pre-existing dotfiles were backed up to ~$olddir"
 
+# Initialize and clone oh-my-zsh repository as submodule
+git submodule init
+git submodule update
+
+# git configuration
+git config --global core.editor "atom --wait"
+git config --global core.autocrlf input
+git config --global push.default simple
+
 install_zsh () {
 
-    #initialize and clone oh-my-zsh repository as submodule
-    git submodule init
-    git submodule update
 
 
 
