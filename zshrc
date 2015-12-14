@@ -55,6 +55,9 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export GOPATH=$HOME/gocode
 export TERMINAL=xfce4-terminal
+export VISUAL=vim
+export EDITOR=vim
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
