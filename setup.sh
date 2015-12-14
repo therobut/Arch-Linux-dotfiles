@@ -67,7 +67,7 @@ git submodule init
 git submodule update
 
 # git configuration
-git config --global core.editor "atom --wait"
+git config --global core.editor "vim"
 git config --global core.autocrlf input
 git config --global push.default simple
 
