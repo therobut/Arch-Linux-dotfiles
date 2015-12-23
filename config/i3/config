@@ -180,7 +180,7 @@ bar {
   }
 }
 
-exec xfce4-terminal
+exec i3-sensible-terminal
 
 client.focused #81a2be #81a2be #1d1f21 #282a2e
 client.focused_inactive #373b41 #373b41 #969896 #282a2e
