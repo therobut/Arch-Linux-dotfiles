@@ -54,7 +54,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export GOPATH=$HOME/gocode
-export TERMINAL=xfce4-terminal
+export TERMINAL=urxvt
 export VISUAL=vim
 export EDITOR=vim
 
