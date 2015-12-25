@@ -97,6 +97,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'crusoexia/vim-monokai'
 
 """ End Bundles """
+call vundle#end()
 if iCanHasVundle == 0
     echo 'Installing Vundles. Please ignore key map error messages'
     echo ''
