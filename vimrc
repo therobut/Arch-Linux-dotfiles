@@ -10,6 +10,7 @@
 "   03. Theme/Colors ............ Colors, fonts, etc.                        "
 "   04. Vim UI .................. User interface behavior                    "
 "   05. Text Formatting/Layout .. Text, tab, indentation related             "
+"   06. Plugins ................. Using Vundle                               "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -72,3 +73,32 @@ set shiftround            " always indent/outdent to the nearest tabstop
 set expandtab             " use spaces instead of tabs
 set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 06. Plugins (Vundle)                                                       "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let iCanHasVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+    echo 'Installing Vundle...'
+    echo ''
+    silent !mkdir -p ~/.vim/bundle
+    silent !git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/vundle
+    let iCanHasVundle=0
+endif
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Add bundles (plugins) here                                                 "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'crusoexia/vim-monokai'
+
+""" End Bundles """
+if iCanHasVundle == 0
+    echo 'Installing Vundles. Please ignore key map error messages'
+    echo ''
+    :VundleInstall
+endif
