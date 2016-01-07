@@ -103,8 +103,8 @@ bindsym $mod+a focus parent
 
 # workspace variables
 set $WS1 "1: term"
-set $WS2 "2: code"
-set $WS3 "3: www"
+set $WS2 "2: www"
+set $WS3 "3: vim"
 set $WS4 "4: hangouts"
 
 # switch to workspace
