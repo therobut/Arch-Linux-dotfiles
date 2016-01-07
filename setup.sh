@@ -57,7 +57,7 @@ for file in $files; do
         fi
 
         echo -n "Creating symlink to bin in home directory ... "
-        ln -s $dir/bin ~/bin
+        ln -s $dir/bin ~
         echo "done"
 
     #dotfiles that belong in home directory
