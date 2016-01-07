@@ -11,7 +11,7 @@ ZSH_THEME="bira"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias aur="yaourt"
-#alias vim='gnome-terminal --name=vim -x vim'
+alias vim='gnome-terminal -x vim'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
