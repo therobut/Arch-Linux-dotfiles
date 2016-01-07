@@ -14,7 +14,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="i3 vim vimrc Xdefaults xinitrc zshrc zprofile"    # list of files/folders to symlink in homedir
+files="bin i3 vim vimrc Xdefaults xinitrc zshrc zprofile"    # list of files/folders to symlink in homedir
 
 
 ##########
@@ -49,6 +49,15 @@ for file in $files; do
         echo "done"
         echo -n "Creating symlink to config/i3status/config in home directory ... "
         ln -s $dir/config/i3status ~/.config/i3status
+        echo "done"
+
+    elif [ $file == 'bin' ]; then
+        if [[ -d ~/bin ]]; then
+            mv ~/bin $olddir
+        fi
+
+        echo -n "Creating symlink to bin in home directory ... "
+        ln -s $dir/bin ~/bin
         echo "done"
 
     #dotfiles that belong in home directory
