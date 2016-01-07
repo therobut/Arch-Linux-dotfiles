@@ -22,6 +22,8 @@
 " 01. General                                                                "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
+set title
+set titlestring=VIM:\ %-25.55F\ %a%r%m titlelen=70
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 02. Events                                                                 "
@@ -43,7 +45,7 @@ set ofu=syntaxcomplete#Complete
 set number                " show line numbers
 set cul                   " highlight current line
 set laststatus=2          " last window always has a statusline
-set hlsearch              " Continue to highlight searched phrases.
+set nohlsearch            " Don't continue to highlight searched phrases.
 set incsearch             " But do highlight as you type your search.
 set ignorecase            " Make searches case-insensitive.
 set ruler                 " Always show info along bottom.
