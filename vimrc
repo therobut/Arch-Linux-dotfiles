@@ -79,10 +79,9 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Add bundles (plugins) here                                                 "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" Add bundles (plugins) here """
 Plugin 'crusoexia/vim-monokai'
+Plugin 'PotatoesMaster/i3-vim-syntax'
 
 """ End Bundles """
 call vundle#end()
