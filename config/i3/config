@@ -101,19 +101,19 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-# client workspace assignments
-assign [class="Gnome-terminal" title="VIM"] $WS3
-for_window [title="VIM: "] move workspace $WS3
-assign [class="Gnome-terminal" title='Irssi:'] $WS4
-for_window [title='Irssi:'] move workspace $WS4
-
 workspace_layout tabbed
 
 # workspace variables
 set $WS1 "1: term"
 set $WS2 "2: www"
 set $WS3 "3: vim"
-set $WS4 "4: irssi"
+set $WS4 "4: irc"
+
+# client workspace assignments
+assign [class="Gnome-terminal" title="VIM"] $WS3
+for_window [title="VIM: "] move workspace $WS3
+assign [class="Gnome-terminal" title='Irssi:'] $WS4
+for_window [title='Irssi:'] move workspace $WS4
 
 # switch to workspace
 bindsym $mod+1 workspace $WS1
