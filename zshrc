@@ -7,11 +7,21 @@ ZSH=$HOME/dotfiles/oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bira"
 
+# User configuration
+
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export GOPATH=$HOME/gocode
+export TERMINAL=urxvt
+export VISUAL=vim
+export EDITOR=vim
+export PAGER=vimpager
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias aur="yaourt"
 alias vim='gnome-terminal -x vim'
+alias less=$PAGER
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -50,14 +60,6 @@ alias vim='gnome-terminal -x vim'
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export GOPATH=$HOME/gocode
-export TERMINAL=urxvt
-export VISUAL=vim
-export EDITOR=vim
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
