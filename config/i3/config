@@ -26,8 +26,9 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+Control+l exec i3lock
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec termite
 
 # chrome browser
 bindsym $mod+c exec google-chrome-stable 
@@ -181,7 +182,7 @@ bar {
   }
 }
 
-exec i3-sensible-terminal
+exec termite
 
 client.focused #81a2be #81a2be #1d1f21 #282a2e
 client.focused_inactive #373b41 #373b41 #969896 #282a2e
