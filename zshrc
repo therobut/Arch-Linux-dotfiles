@@ -11,7 +11,7 @@ ZSH_THEME="bira"
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export GOPATH=$HOME/gocode
-export TERMINAL=urxvt
+export TERMINAL=termite
 export VISUAL=vim
 export EDITOR=vim
 export PAGER=vimpager
