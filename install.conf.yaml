@@ -1,0 +1,40 @@
+- clean: ['~']
+
+- link:
+    ~/bin:
+        relink: true
+        path: bin/
+    ~/.config/i3:
+        create: true
+        relink: true
+        path: config/i3/
+    ~/.config/i3status:
+        create: true
+        relink: true
+        path: config/i3status/
+    ~/.config/termite:
+        create: true
+        relink: true
+        path: config/termite/
+    ~/.vim:
+        relink: true
+        path: vim/
+    ~/.vimrc:
+        relink: true
+        path: vimrc
+    ~/.xinitrc:
+        relink: true
+        path: xinitrc
+    ~/.zprofile:
+        relink: true
+        path: zprofile
+    ~/.zshrc:
+        relink: true
+        path: zshrc
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [git config --global core.editor "vim", Setting git defaults]
+    - [git config --global core.autocrlf input]
+    - [git config --global push.default simple]
+    - [./setup.sh, Attempting to install tools and programs]
