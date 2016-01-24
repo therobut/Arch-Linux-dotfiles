@@ -1,90 +1,71 @@
 #!/bin/bash
 ############################
 # setup.sh
-# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
+# This script attempts to install the tools and programs which my dotfiles are relevant to
 # Assumes 'sudo' is installed
+#
+# EXIT CODES:
+# 0 - success
+# 1 - not running linux
+# 2 - could not determine Linux distro
+# 3 - could not find relevant tools-<distro>.txt file
 ############################
-
-###########################################################################
-## Heavily modified from Michael Smalley's original.                     ##
-## Original can be found at: https://github.com/michaeljsmalley/dotfiles ##
-###########################################################################
 
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bin i3 irssi vim vimrc Xdefaults xinitrc zshrc zprofile"    # list of files/folders to symlink in homedir
+# make sure we're on linux
+platform=$(uname);
 
+# sets $NAME variable, if supplied by the linux distro
+if [[ $platform == 'Linux' ]]; then
+    if [ -f /etc/os-release ]; then
+        source /etc/os-release
+    fi
+fi
+
+case $NAME in
+    'Arch Linux')
+        distro='arch'
+        ;;
+    'Ubuntu')
+        distro='ubuntu'
+        ;;
+    'Debian')
+        distro='debian'
+        ;;
+    *)
+        distro=false
+        ;;
+esac
 
 ##########
 
-# create dotfiles_old in homedir
-echo -n "Creating $olddir for backup of any existing dotfiles in ~ ... "
-mkdir -p $olddir
-echo "done"
+if [[ $platform != 'Linux' ]]; then
+    #stop script execution
+    echo "Looks like you aren't running Linux. This script is only designed for Linux, unfortunately."
+    exit 1
+fi
 
-# change to the dotfiles directory
-echo -n "Changing to the $dir directory ... "
-cd $dir
-echo "done"
+install_tool () {
+    
+    case $distro in
+        'arch')
+            sudo pacman -S --noconfirm $1
+            ;;
+        'ubuntu')
+            sudo aptitude install $1
+            ;;
+        'debian')
+            sudo apt-get install $1
+            ;;
+        *)
+            echo "Unable to determine Linux Distro"
+            exit 2
+            ;;
+    esac
+}
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
-for file in $files; do
-
-    #config files for i3 window manager need to be in ~/.config
-    if [[ ! -d ~/.config ]]; then
-        mkdir ~/.config
-    fi
-    if [ $file == 'i3' ]; then
-        if [[ -d ~/.config/i3 ]]; then
-            mv ~/.config/i3 $olddir
-        fi
-        if [[ -d ~/.config/i3status ]]; then
-            mv ~/.config/i3status $olddir
-        fi
-
-        echo -n "Creating symlink to config/i3/config in home directory ... "
-        ln -s $dir/config/i3 ~/.config/i3
-        echo "done"
-        echo -n "Creating symlink to config/i3status/config in home directory ... "
-        ln -s $dir/config/i3status ~/.config/i3status
-        echo "done"
-
-    elif [ $file == 'bin' ]; then
-        if [[ -d ~/bin ]]; then
-            mv ~/bin $olddir
-        fi
-
-        echo -n "Creating symlink to bin in home directory ... "
-        ln -s $dir/bin ~
-        echo "done"
-
-    #dotfiles that belong in home directory
-    else
-        mv ~/.$file $olddir
-        echo -n "Creating symlink to $file in home directory ... "
-        ln -s $dir/$file ~/.$file
-        echo "done"
-    fi
-done
-
-echo "Pre-existing dotfiles were backed up to ~$olddir"
-
-# Initialize and clone oh-my-zsh repository as submodule
-git submodule init
-git submodule update
-
-# git configuration
-git config --global core.editor "vim"
-git config --global core.autocrlf input
-git config --global push.default simple
-
-install_zsh () {
-
-
-
-
+chsh_zsh () {
     # Test to see if zshell is installed.  If it is:
     if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
         # Set the default shell to zsh if it isn't currently set to zsh
@@ -92,34 +73,21 @@ install_zsh () {
             chsh -s $(which zsh)
         fi
     else
-        # If zsh isn't installed, get the platform of the current machine
-        platform=$(uname);
-        # If the platform is Linux, try to install zsh and then recurse
-        if [[ $platform == 'Linux' ]]; then
-           
-            #try to find which linux distro user is running
-            if [ -f /etc/os-release ]; then
-                source /etc/os-release
-            fi
-            
-            case $NAME in
-                'Arch Linux')
-                    sudo pacman -S zsh
-                    ;;
-                'Ubuntu')
-                    sudo aptitude install zsh
-                    ;;
-                'Debian')
-                    sudo apt-get install zsh
-                    ;;
-                *)
-                    echo 'zsh could not be installed. Please install zsh manually.'
-                    return
-                    ;;
-            esac
-            install_zsh
-        fi
+        install_tool zsh
+        chsh_zsh
     fi
 }
 
-install_zsh
+if [ -f tools-$distro.txt ]; then
+    while read tool
+    do
+        install_tool $tool
+    done < tools-$distro.txt
+else
+    echo "tools-$distro.txt not found."
+    exit 3
+fi
+
+chsh_zsh
+
+exit 0

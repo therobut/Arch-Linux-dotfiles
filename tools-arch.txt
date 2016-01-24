@@ -1,0 +1,10 @@
+base-devel
+ 
+i3
+ 
+dmenu
+gvim
+termite
+vim-runtime
+weechat
+zsh
