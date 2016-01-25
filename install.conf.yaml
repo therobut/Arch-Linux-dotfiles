@@ -22,6 +22,9 @@
     ~/.vimrc:
         relink: true
         path: vimrc
+    ~/.weechat:
+        relink: true
+        path: weechat/
     ~/.xinitrc:
         relink: true
         path: xinitrc
@@ -37,4 +40,8 @@
     - [git config --global core.editor "vim", Setting git defaults]
     - [git config --global core.autocrlf input]
     - [git config --global push.default simple]
-    - [./setup.sh, Attempting to install tools and programs]
+    - 
+        command: ./setup.sh
+        stdin: true
+        stdout: true
+        stderr: true

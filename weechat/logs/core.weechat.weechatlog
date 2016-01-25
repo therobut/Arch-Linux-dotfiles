@@ -1,0 +1,499 @@
+2016-01-23 12:26:04		Plugins loaded: alias, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, trigger, xfer
+2016-01-23 12:26:57		fifo: pipe closed
+2016-01-23 12:27:16		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-01-23 12:27:27		[core]
+2016-01-23 12:27:27		  away     color    debug    help     key      mute     proxy    repeat   set      uptime   window 
+2016-01-23 12:27:27		  bar      command  eval     history  layout   plugin   quit     save     unset    version
+2016-01-23 12:27:27		  buffer   cursor   filter   input    mouse    print    reload   secure   upgrade  wait   
+2016-01-23 12:27:27		[tcl]
+2016-01-23 12:27:27		  tcl
+2016-01-23 12:27:27		[trigger]
+2016-01-23 12:27:27		  trigger
+2016-01-23 12:27:27		[alias]
+2016-01-23 12:27:27		  AAWAY    AMSG     BYE      CL       IG       KB       MSGBUF   Q        SIGNOFF  UMODE    WC       WW     
+2016-01-23 12:27:27		  alias    ANICK    C        CLOSE    J        LEAVE    MUB      REDRAW   T        V        WI     
+2016-01-23 12:27:27		  AME      BEEP     CHAT     EXIT     K        M        N        SAY      UB       W        WII    
+2016-01-23 12:27:27		[aspell]
+2016-01-23 12:27:27		  aspell
+2016-01-23 12:27:27		[charset]
+2016-01-23 12:27:27		  charset
+2016-01-23 12:27:27		[xfer]
+2016-01-23 12:27:27		  me  xfer
+2016-01-23 12:27:27		[relay]
+2016-01-23 12:27:27		  relay
+2016-01-23 12:27:27		[script]
+2016-01-23 12:27:27		  script
+2016-01-23 12:27:27		[exec]
+2016-01-23 12:27:27		  exec
+2016-01-23 12:27:27		[guile]
+2016-01-23 12:27:27		  guile
+2016-01-23 12:27:27		[logger]
+2016-01-23 12:27:27		  logger
+2016-01-23 12:27:27		[python]
+2016-01-23 12:27:27		  python
+2016-01-23 12:27:27		[lua]
+2016-01-23 12:27:27		  lua
+2016-01-23 12:27:27		[ruby]
+2016-01-23 12:27:27		  ruby
+2016-01-23 12:27:27		[irc]
+2016-01-23 12:27:27		  admin       dcc         info        list        nick        query       samode      squit       userhost    whowas    
+2016-01-23 12:27:27		  allchan     dehalfop    invite      lusers      notice      quiet       sanick      stats       users     
+2016-01-23 12:27:27		  allpv       deop        ison        map         notify      quote       sapart      summon      version   
+2016-01-23 12:27:27		  allserv     devoice     join        me          op          reconnect   saquit      time        voice     
+2016-01-23 12:27:27		  ban         die         kick        mode        oper        rehash      server      topic       wallchops 
+2016-01-23 12:27:27		  connect     disconnect  kickban     motd        part        remove      service     trace       wallops   
+2016-01-23 12:27:27		  ctcp        halfop      kill        msg         ping        restart     servlist    unban       who       
+2016-01-23 12:27:27		  cycle       ignore      links       names       pong        sajoin      squery      unquiet     whois     
+2016-01-23 12:27:27		[perl]
+2016-01-23 12:27:27		  perl
+2016-01-23 12:28:15		[irc]  /squit  <server> <comment>
+2016-01-23 12:28:15		disconnect server links
+2016-01-23 12:28:15		 server: server name
+2016-01-23 12:28:15		comment: comment
+2016-01-23 12:28:21		[irc]  /server  list|listfull [<server>]
+2016-01-23 12:28:21		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2016-01-23 12:28:21		                copy|rename <server> <new_name>
+2016-01-23 12:28:21		                reorder <server> [<server>...]
+2016-01-23 12:28:21		                del|keep <server>
+2016-01-23 12:28:21		                deloutq|jump|raw
+2016-01-23 12:28:21		list, add or remove IRC servers
+2016-01-23 12:28:21		    list: list servers (without argument, this list is displayed)
+2016-01-23 12:28:21		listfull: list servers with detailed info for each server
+2016-01-23 12:28:21		     add: add a new server
+2016-01-23 12:28:21		  server: server name, for internal and display use
+2016-01-23 12:28:21		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2016-01-23 12:28:21		    temp: add a temporary server (not saved)
+2016-01-23 12:28:21		  option: set option for server (for boolean option, value can be omitted)
+2016-01-23 12:28:21		nooption: set boolean option to 'off' (for example: -nossl)
+2016-01-23 12:28:21		    copy: duplicate a server
+2016-01-23 12:28:21		  rename: rename a server
+2016-01-23 12:28:21		 reorder: reorder list of servers
+2016-01-23 12:28:21		    keep: keep server in config file (for temporary servers only)
+2016-01-23 12:28:21		     del: delete a server
+2016-01-23 12:28:21		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2016-01-23 12:28:21		    jump: jump to server buffer
+2016-01-23 12:28:21		     raw: open buffer with raw IRC data
+2016-01-23 12:28:21		Examples:
+2016-01-23 12:28:21		  /server listfull
+2016-01-23 12:28:21		  /server add freenode chat.freenode.net
+2016-01-23 12:28:21		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2016-01-23 12:28:21		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2016-01-23 12:28:21		  /server copy freenode freenode-test
+2016-01-23 12:28:21		  /server rename freenode-test freenode2
+2016-01-23 12:28:21		  /server reorder freenode2 freenode
+2016-01-23 12:28:21		  /server del freenode
+2016-01-23 12:28:21		  /server deloutq
+2016-01-23 12:29:51		No server
+2016-01-23 12:30:27		irc: server freenode added
+2016-01-23 12:30:43		irc: server Bitlbee added
+2016-01-23 12:31:07		irc: server pickups added
+2016-01-23 12:31:13		[irc]  /connect  <server> [<server>...] [-<option>[=<value>]] [-no<option>] [-nojoin] [-switch]
+2016-01-23 12:31:13		                 -all|-auto|-open [-nojoin] [-switch]
+2016-01-23 12:31:13		connect to IRC server(s)
+2016-01-23 12:31:13		    server: server name, which can be:
+2016-01-23 12:31:13		            - internal server name (added by /server add, recommended usage)
+2016-01-23 12:31:13		            - hostname/port or IP/port, port is 6667 by default
+2016-01-23 12:31:13		            - URL with format: irc[6][s]://[nickname[:password]@]irc.example.org[:port][/#channel1][,#channel2[...]]
+2016-01-23 12:31:13		            Note: for an address/IP/URL, a temporary server is added (NOT SAVED), see /help irc.look.temporary_servers
+2016-01-23 12:31:13		    option: set option for server (for boolean option, value can be omitted)
+2016-01-23 12:31:13		  nooption: set boolean option to 'off' (for example: -nossl)
+2016-01-23 12:31:13		      -all: connect to all servers defined in configuration
+2016-01-23 12:31:13		     -auto: connect to servers with autoconnect enabled
+2016-01-23 12:31:13		     -open: connect to all opened servers that are not currently connected
+2016-01-23 12:31:13		   -nojoin: do not join any channel (even if autojoin is enabled on server)
+2016-01-23 12:31:13		   -switch: switch to next server address
+2016-01-23 12:31:13		To disconnect from a server or stop any connection attempt, use command /disconnect.
+2016-01-23 12:31:13		Examples:
+2016-01-23 12:31:13		  /connect freenode
+2016-01-23 12:31:13		  /connect irc.oftc.net/6667
+2016-01-23 12:31:13		  /connect irc6.oftc.net/6667 -ipv6
+2016-01-23 12:31:13		  /connect irc6.oftc.net/6697 -ipv6 -ssl
+2016-01-23 12:31:13		  /connect my.server.org/6697 -ssl -password=test
+2016-01-23 12:31:13		  /connect irc://nick@irc.oftc.net/#channel
+2016-01-23 12:31:13		  /connect -switch
+2016-01-23 12:31:23		irc: server Bitlbee has been deleted
+2016-01-23 12:31:31		irc: server bitlbee added
+2016-01-23 12:31:46	=!=	Error: unknown command "/win" (type /help for help)
+2016-01-23 12:32:00		[core]
+2016-01-23 12:32:00		  away     color    debug    help     key      mute     proxy    repeat   set      uptime   window 
+2016-01-23 12:32:00		  bar      command  eval     history  layout   plugin   quit     save     unset    version
+2016-01-23 12:32:00		  buffer   cursor   filter   input    mouse    print    reload   secure   upgrade  wait   
+2016-01-23 12:32:00		[tcl]
+2016-01-23 12:32:00		  tcl
+2016-01-23 12:32:00		[trigger]
+2016-01-23 12:32:00		  trigger
+2016-01-23 12:32:00		[alias]
+2016-01-23 12:32:00		  AAWAY    ANICK    CHAT     IG       LEAVE    N        SIGNOFF  V        WII    
+2016-01-23 12:32:00		  alias    BEEP     CL       J        M        Q        T        W        WW     
+2016-01-23 12:32:00		  AME      BYE      CLOSE    K        MSGBUF   REDRAW   UB       WC     
+2016-01-23 12:32:00		  AMSG     C        EXIT     KB       MUB      SAY      UMODE    WI     
+2016-01-23 12:32:00		[aspell]
+2016-01-23 12:32:00		  aspell
+2016-01-23 12:32:00		[charset]
+2016-01-23 12:32:00		  charset
+2016-01-23 12:32:00		[xfer]
+2016-01-23 12:32:00		  me  xfer
+2016-01-23 12:32:00		[relay]
+2016-01-23 12:32:00		  relay
+2016-01-23 12:32:00		[script]
+2016-01-23 12:32:00		  script
+2016-01-23 12:32:00		[exec]
+2016-01-23 12:32:00		  exec
+2016-01-23 12:32:00		[guile]
+2016-01-23 12:32:00		  guile
+2016-01-23 12:32:00		[logger]
+2016-01-23 12:32:00		  logger
+2016-01-23 12:32:00		[python]
+2016-01-23 12:32:00		  python
+2016-01-23 12:32:00		[lua]
+2016-01-23 12:32:00		  lua
+2016-01-23 12:32:00		[ruby]
+2016-01-23 12:32:00		  ruby
+2016-01-23 12:32:00		[irc]
+2016-01-23 12:32:00		  admin       deop        kick        msg         query       sapart      topic       who       
+2016-01-23 12:32:00		  allchan     devoice     kickban     names       quiet       saquit      trace       whois     
+2016-01-23 12:32:00		  allpv       die         kill        nick        quote       server      unban       whowas    
+2016-01-23 12:32:00		  allserv     disconnect  links       notice      reconnect   service     unquiet   
+2016-01-23 12:32:00		  ban         halfop      list        notify      rehash      servlist    userhost  
+2016-01-23 12:32:00		  connect     ignore      lusers      op          remove      squery      users     
+2016-01-23 12:32:00		  ctcp        info        map         oper        restart     squit       version   
+2016-01-23 12:32:00		  cycle       invite      me          part        sajoin      stats       voice     
+2016-01-23 12:32:00		  dcc         ison        mode        ping        samode      summon      wallchops 
+2016-01-23 12:32:00		  dehalfop    join        motd        pong        sanick      time        wallops   
+2016-01-23 12:32:00		[perl]
+2016-01-23 12:32:00		  perl
+2016-01-23 12:32:15		Windows list:
+2016-01-23 12:32:15		[1] (0:0;134x36) 
+2016-01-23 12:32:23		Windows list:
+2016-01-23 12:32:23		[1] (0:0;134x36) 
+2016-01-23 12:32:30		[core]  /window  list
+2016-01-23 12:32:30		                 -1|+1|b#|up|down|left|right [-window <number>]
+2016-01-23 12:32:30		                 <number>
+2016-01-23 12:32:30		                 splith|splitv [-window <number>] [<pct>]
+2016-01-23 12:32:30		                 resize [-window <number>] [+/-]<pct>
+2016-01-23 12:32:30		                 balance
+2016-01-23 12:32:30		                 merge [-window <number>] [all]
+2016-01-23 12:32:30		                 page_up|page_down [-window <number>]
+2016-01-23 12:32:30		                 refresh
+2016-01-23 12:32:30		                 scroll [-window <number>] [+/-]<value>[s|m|h|d|M|y]
+2016-01-23 12:32:30		                 scroll_horiz [-window <number>] [+/-]<value>[%]
+2016-01-23 12:32:30		                 scroll_up|scroll_down|scroll_top|scroll_bottom|scroll_beyond_end|scroll_previous_highlight|scroll_next_highlight|scroll_unread [-window <number>]
+2016-01-23 12:32:30		                 swap [-window <number>] [up|down|left|right]
+2016-01-23 12:32:30		                 zoom [-window <number>]
+2016-01-23 12:32:30		                 bare [<delay>]
+2016-01-23 12:32:30		manage windows
+2016-01-23 12:32:30		         list: list opened windows (without argument, this list is displayed)
+2016-01-23 12:32:30		           -1: jump to previous window
+2016-01-23 12:32:30		           +1: jump to next window
+2016-01-23 12:32:30		           b#: jump to next window displaying buffer number #
+2016-01-23 12:32:30		           up: switch to window above current one
+2016-01-23 12:32:30		         down: switch to window below current one
+2016-01-23 12:32:30		         left: switch to window on the left
+2016-01-23 12:32:30		        right: switch to window on the right
+2016-01-23 12:32:30		       number: window number (see /window list)
+2016-01-23 12:32:30		       splith: split current window horizontally
+2016-01-23 12:32:30		       splitv: split current window vertically
+2016-01-23 12:32:30		       resize: resize window size, new size is <pct> percentage of parent window
+2016-01-23 12:32:30		      balance: balance the sizes of all windows
+2016-01-23 12:32:30		        merge: merge window with another (all = keep only one window)
+2016-01-23 12:32:30		      page_up: scroll one page up
+2016-01-23 12:32:30		    page_down: scroll one page down
+2016-01-23 12:32:30		      refresh: refresh screen
+2016-01-23 12:32:30		       scroll: scroll a number of lines (+/-N) or with time: s=seconds, m=minutes, h=hours, d=days, M=months, y=years
+2016-01-23 12:32:30		 scroll_horiz: scroll horizontally a number of columns (+/-N) or percentage of window size (this scrolling is possible only on buffers with free content)
+2016-01-23 12:32:30		    scroll_up: scroll a few lines up
+2016-01-23 12:32:30		  scroll_down: scroll a few lines down
+2016-01-23 12:32:30		   scroll_top: scroll to top of buffer
+2016-01-23 12:32:30		scroll_bottom: scroll to bottom of buffer
+2016-01-23 12:32:30		scroll_beyond_end: scroll beyond the end of buffer
+2016-01-23 12:32:30		scroll_previous_highlight: scroll to previous highlight
+2016-01-23 12:32:30		scroll_next_highlight: scroll to next highlight
+2016-01-23 12:32:30		scroll_unread: scroll to unread marker
+2016-01-23 12:32:30		         swap: swap buffers of two windows (with optional direction for target window)
+2016-01-23 12:32:30		         zoom: zoom on window
+2016-01-23 12:32:30		         bare: toggle bare display (with optional delay in seconds for automatic return to standard display mode)
+2016-01-23 12:32:30		For splith and splitv, pct is a percentage which represents size of new window, computed with current window as size reference. For example 25 means create a new window with size = current_size / 4
+2016-01-23 12:32:30		Examples:
+2016-01-23 12:32:30		  jump to window displaying buffer #1:
+2016-01-23 12:32:30		    /window b1
+2016-01-23 12:32:30		  scroll 2 lines up:
+2016-01-23 12:32:30		    /window scroll -2
+2016-01-23 12:32:30		  scroll 2 days up:
+2016-01-23 12:32:30		    /window scroll -2d
+2016-01-23 12:32:30		  scroll to beginning of current day:
+2016-01-23 12:32:30		    /window scroll -d
+2016-01-23 12:32:30		  zoom on window #2:
+2016-01-23 12:32:30		    /window zoom -window 2
+2016-01-23 12:32:30		  enable bare display for 2 seconds:
+2016-01-23 12:32:30		    /window bare 2
+2016-01-23 12:32:44		[core]
+2016-01-23 12:32:44		  away     color    debug    help     key      mute     proxy    repeat   set      uptime   window 
+2016-01-23 12:32:44		  bar      command  eval     history  layout   plugin   quit     save     unset    version
+2016-01-23 12:32:44		  buffer   cursor   filter   input    mouse    print    reload   secure   upgrade  wait   
+2016-01-23 12:32:44		[tcl]
+2016-01-23 12:32:44		  tcl
+2016-01-23 12:32:44		[trigger]
+2016-01-23 12:32:44		  trigger
+2016-01-23 12:32:44		[alias]
+2016-01-23 12:32:44		  AAWAY    AMSG     BYE      CL       IG       KB       MSGBUF   Q        SIGNOFF  UMODE    WC       WW     
+2016-01-23 12:32:44		  alias    ANICK    C        CLOSE    J        LEAVE    MUB      REDRAW   T        V        WI     
+2016-01-23 12:32:44		  AME      BEEP     CHAT     EXIT     K        M        N        SAY      UB       W        WII    
+2016-01-23 12:32:44		[aspell]
+2016-01-23 12:32:44		  aspell
+2016-01-23 12:32:44		[charset]
+2016-01-23 12:32:44		  charset
+2016-01-23 12:32:44		[xfer]
+2016-01-23 12:32:44		  me  xfer
+2016-01-23 12:32:44		[relay]
+2016-01-23 12:32:44		  relay
+2016-01-23 12:32:44		[script]
+2016-01-23 12:32:44		  script
+2016-01-23 12:32:44		[exec]
+2016-01-23 12:32:44		  exec
+2016-01-23 12:32:44		[guile]
+2016-01-23 12:32:44		  guile
+2016-01-23 12:32:44		[logger]
+2016-01-23 12:32:44		  logger
+2016-01-23 12:32:44		[python]
+2016-01-23 12:32:44		  python
+2016-01-23 12:32:44		[lua]
+2016-01-23 12:32:44		  lua
+2016-01-23 12:32:44		[ruby]
+2016-01-23 12:32:44		  ruby
+2016-01-23 12:32:44		[irc]
+2016-01-23 12:32:44		  admin       dehalfop    ison        me          oper        remove      servlist    unquiet     whowas    
+2016-01-23 12:32:44		  allchan     deop        join        mode        part        restart     squery      userhost  
+2016-01-23 12:32:44		  allpv       devoice     kick        motd        ping        sajoin      squit       users     
+2016-01-23 12:32:44		  allserv     die         kickban     msg         pong        samode      stats       version   
+2016-01-23 12:32:44		  ban         disconnect  kill        names       query       sanick      summon      voice     
+2016-01-23 12:32:44		  connect     halfop      links       nick        quiet       sapart      time        wallchops 
+2016-01-23 12:32:44		  ctcp        ignore      list        notice      quote       saquit      topic       wallops   
+2016-01-23 12:32:44		  cycle       info        lusers      notify      reconnect   server      trace       who       
+2016-01-23 12:32:44		  dcc         invite      map         op          rehash      service     unban       whois     
+2016-01-23 12:32:44		[perl]
+2016-01-23 12:32:44		  perl
+2016-01-23 12:33:26		[script]  /script  list [-o|-i]
+2016-01-23 12:33:26		                   search <text>
+2016-01-23 12:33:26		                   show <script>
+2016-01-23 12:33:26		                   load|unload|reload <script> [<script>...]
+2016-01-23 12:33:26		                   autoload|noautoload|toggleautoload <script> [<script>...]
+2016-01-23 12:33:26		                   install|remove|installremove|hold [-q] <script> [<script>...]
+2016-01-23 12:33:26		                   upgrade
+2016-01-23 12:33:26		                   update
+2016-01-23 12:33:26		WeeChat scripts manager
+2016-01-23 12:33:26		          list: list loaded scripts (all languages)
+2016-01-23 12:33:26		            -o: send list of loaded scripts to buffer
+2016-01-23 12:33:26		            -i: copy list of loaded scripts in command line (for sending to buffer)
+2016-01-23 12:33:26		        search: search scripts by tags or text and display result on scripts buffer
+2016-01-23 12:33:26		          show: show detailed info about a script
+2016-01-23 12:33:26		          load: load script(s)
+2016-01-23 12:33:26		        unload: unload script(s)
+2016-01-23 12:33:26		        reload: reload script(s)
+2016-01-23 12:33:26		      autoload: autoload the script
+2016-01-23 12:33:26		    noautoload: do not autoload the script
+2016-01-23 12:33:26		toggleautoload: toggle autoload
+2016-01-23 12:33:26		       install: install/upgrade script(s)
+2016-01-23 12:33:26		        remove: remove script(s)
+2016-01-23 12:33:26		 installremove: install or remove script(s), depending on current state
+2016-01-23 12:33:26		          hold: hold/unhold script(s) (a script held will not be upgraded any more and cannot be removed)
+2016-01-23 12:33:26		            -q: quiet mode: do not display messages
+2016-01-23 12:33:26		       upgrade: upgrade all installed scripts which are obsolete (new version available)
+2016-01-23 12:33:26		        update: update local scripts cache
+2016-01-23 12:33:26		Without argument, this command opens a buffer with list of scripts.
+2016-01-23 12:33:26		On script buffer, the possible status for each script are:
+2016-01-23 12:33:26		  * i a H r N
+2016-01-23 12:33:26		  | | | | | |
+2016-01-23 12:33:26		  | | | | | obsolete (new version available)
+2016-01-23 12:33:26		  | | | | running (loaded)
+2016-01-23 12:33:26		  | | | held
+2016-01-23 12:33:26		  | | autoloaded
+2016-01-23 12:33:26		  | installed
+2016-01-23 12:33:26		  popular script
+2016-01-23 12:33:26		Keys on script buffer:
+2016-01-23 12:33:26		  alt+i  install script
+2016-01-23 12:33:26		  alt+r  remove script
+2016-01-23 12:33:26		  alt+l  load script
+2016-01-23 12:33:26		  alt+L  reload script
+2016-01-23 12:33:26		  alt+u  unload script
+2016-01-23 12:33:26		  alt+A  autoload script
+2016-01-23 12:33:26		  alt+h  (un)hold script
+2016-01-23 12:33:26		  alt+v  view script
+2016-01-23 12:33:26		Input allowed on script buffer:
+2016-01-23 12:33:26		  i/r/l/L/u/h  action on script (same as keys above)
+2016-01-23 12:33:26		  q            close buffer
+2016-01-23 12:33:26		  $            refresh buffer
+2016-01-23 12:33:26		  s:x,y        sort buffer using keys x and y (see /help script.look.sort)
+2016-01-23 12:33:26		  s:           reset sort (use default sort)
+2016-01-23 12:33:26		  word(s)      filter scripts: search word(s) in scripts (description, tags, ...)
+2016-01-23 12:33:26		  *            remove filter
+2016-01-23 12:33:26		Mouse actions on script buffer:
+2016-01-23 12:33:26		  wheel         scroll list
+2016-01-23 12:33:26		  left button   select script
+2016-01-23 12:33:26		  right button  install/remove script
+2016-01-23 12:33:26		Examples:
+2016-01-23 12:33:26		  /script search url
+2016-01-23 12:33:26		  /script install iset.pl buffers.pl
+2016-01-23 12:33:26		  /script remove iset.pl
+2016-01-23 12:33:26		  /script hold urlserver.py
+2016-01-23 12:33:26		  /script reload urlserver
+2016-01-23 12:33:26		  /script upgrade
+2016-01-23 12:33:40		script: downloading list of scripts...
+2016-01-23 12:33:41		script: 299 scripts for WeeChat 1.3
+2016-01-23 12:47:01		New key binding (context "mouse"): @bar(buffers):ctrl-wheeldown => hsignal:buffers_mouse
+2016-01-23 12:47:01		New key binding (context "mouse"): @bar(buffers):ctrl-wheelup => hsignal:buffers_mouse
+2016-01-23 12:47:01		New key binding (context "mouse"): @item(buffers):button2* => hsignal:buffers_mouse
+2016-01-23 12:47:01		New key binding (context "mouse"): @item(buffers):button1* => hsignal:buffers_mouse
+2016-01-23 12:48:19		perl: scripts unloaded
+2016-01-23 12:48:19		fifo: pipe closed
+2016-01-23 12:51:22		perl scripts loaded: buffers
+2016-01-23 12:51:22		script: 299 scripts for WeeChat 1.3
+2016-01-23 12:51:22		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-01-23 12:51:48	=!=	Too few arguments for command "/msg" (help on command: /help msg)
+2016-01-23 12:57:21		perl: scripts unloaded
+2016-01-23 12:57:21		fifo: pipe closed
+2016-01-23 12:58:17		perl scripts loaded: buffers
+2016-01-23 12:58:17		script: 299 scripts for WeeChat 1.3
+2016-01-23 12:58:17		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-01-23 12:59:50	=!=	irc: command "list" must be executed on irc buffer (server or channel)
+2016-01-23 13:00:14	=!=	irc: command "join" must be executed on irc buffer (server or channel)
+2016-01-23 13:00:17		python: stdout/stderr: Traceback (most recent call last):
+2016-01-23 13:00:17		python: stdout/stderr:   File "/home/robut/.weechat/python/listbuffer.py", line 257, in lb_input_cb
+2016-01-23 13:00:17		python: stdout/stderr:     lb_options[input_data]()
+2016-01-23 13:00:17		python: stdout/stderr: KeyError: 'j'
+2016-01-23 13:00:17	=!=	python: error in function "lb_input_cb"
+2016-01-23 13:00:47		[irc]  /list  [<channel>[,<channel>...]] [<server>] [-re <regex>]
+2016-01-23 13:00:47		list channels and their topic
+2016-01-23 13:00:47		channel: channel to list
+2016-01-23 13:00:47		 server: server name
+2016-01-23 13:00:47		  regex: POSIX extended regular expression used to filter results (case insensitive, can start by "(?-i)" to become case sensitive)
+2016-01-23 13:00:47		Examples:
+2016-01-23 13:00:47		  list all channels on server (can be very slow on large networks):
+2016-01-23 13:00:47		    /list
+2016-01-23 13:00:47		  list channel #weechat:
+2016-01-23 13:00:47		    /list #weechat
+2016-01-23 13:00:47		  list all channels beginning with "#weechat" (can be very slow on large networks):
+2016-01-23 13:00:47		    /list -re #weechat.*
+2016-01-23 13:00:58		[script]  /script  list [-o|-i]
+2016-01-23 13:00:58		                   search <text>
+2016-01-23 13:00:58		                   show <script>
+2016-01-23 13:00:58		                   load|unload|reload <script> [<script>...]
+2016-01-23 13:00:58		                   autoload|noautoload|toggleautoload <script> [<script>...]
+2016-01-23 13:00:58		                   install|remove|installremove|hold [-q] <script> [<script>...]
+2016-01-23 13:00:58		                   upgrade
+2016-01-23 13:00:58		                   update
+2016-01-23 13:00:58		WeeChat scripts manager
+2016-01-23 13:00:58		          list: list loaded scripts (all languages)
+2016-01-23 13:00:58		            -o: send list of loaded scripts to buffer
+2016-01-23 13:00:58		            -i: copy list of loaded scripts in command line (for sending to buffer)
+2016-01-23 13:00:58		        search: search scripts by tags or text and display result on scripts buffer
+2016-01-23 13:00:58		          show: show detailed info about a script
+2016-01-23 13:00:58		          load: load script(s)
+2016-01-23 13:00:58		        unload: unload script(s)
+2016-01-23 13:00:58		        reload: reload script(s)
+2016-01-23 13:00:58		      autoload: autoload the script
+2016-01-23 13:00:58		    noautoload: do not autoload the script
+2016-01-23 13:00:58		toggleautoload: toggle autoload
+2016-01-23 13:00:58		       install: install/upgrade script(s)
+2016-01-23 13:00:58		        remove: remove script(s)
+2016-01-23 13:00:58		 installremove: install or remove script(s), depending on current state
+2016-01-23 13:00:58		          hold: hold/unhold script(s) (a script held will not be upgraded any more and cannot be removed)
+2016-01-23 13:00:58		            -q: quiet mode: do not display messages
+2016-01-23 13:00:58		       upgrade: upgrade all installed scripts which are obsolete (new version available)
+2016-01-23 13:00:58		        update: update local scripts cache
+2016-01-23 13:00:58		Without argument, this command opens a buffer with list of scripts.
+2016-01-23 13:00:58		On script buffer, the possible status for each script are:
+2016-01-23 13:00:58		  * i a H r N
+2016-01-23 13:00:58		  | | | | | |
+2016-01-23 13:00:58		  | | | | | obsolete (new version available)
+2016-01-23 13:00:58		  | | | | running (loaded)
+2016-01-23 13:00:58		  | | | held
+2016-01-23 13:00:58		  | | autoloaded
+2016-01-23 13:00:58		  | installed
+2016-01-23 13:00:58		  popular script
+2016-01-23 13:00:58		Keys on script buffer:
+2016-01-23 13:00:58		  alt+i  install script
+2016-01-23 13:00:58		  alt+r  remove script
+2016-01-23 13:00:58		  alt+l  load script
+2016-01-23 13:00:58		  alt+L  reload script
+2016-01-23 13:00:58		  alt+u  unload script
+2016-01-23 13:00:58		  alt+A  autoload script
+2016-01-23 13:00:58		  alt+h  (un)hold script
+2016-01-23 13:00:58		  alt+v  view script
+2016-01-23 13:00:58		Input allowed on script buffer:
+2016-01-23 13:00:58		  i/r/l/L/u/h  action on script (same as keys above)
+2016-01-23 13:00:58		  q            close buffer
+2016-01-23 13:00:58		  $            refresh buffer
+2016-01-23 13:00:58		  s:x,y        sort buffer using keys x and y (see /help script.look.sort)
+2016-01-23 13:00:58		  s:           reset sort (use default sort)
+2016-01-23 13:00:58		  word(s)      filter scripts: search word(s) in scripts (description, tags, ...)
+2016-01-23 13:00:58		  *            remove filter
+2016-01-23 13:00:58		Mouse actions on script buffer:
+2016-01-23 13:00:58		  wheel         scroll list
+2016-01-23 13:00:58		  left button   select script
+2016-01-23 13:00:58		  right button  install/remove script
+2016-01-23 13:00:58		Examples:
+2016-01-23 13:00:58		  /script search url
+2016-01-23 13:00:58		  /script install iset.pl buffers.pl
+2016-01-23 13:00:58		  /script remove iset.pl
+2016-01-23 13:00:58		  /script hold urlserver.py
+2016-01-23 13:00:58		  /script reload urlserver
+2016-01-23 13:00:58		  /script upgrade
+2016-01-23 13:01:16		[core]
+2016-01-23 13:01:16		  away     command  filter   key      plugin   reload   set      version
+2016-01-23 13:01:16		  bar      cursor   help     layout   print    repeat   unset    wait   
+2016-01-23 13:01:16		  buffer   debug    history  mouse    proxy    save     upgrade  window 
+2016-01-23 13:01:16		  color    eval     input    mute     quit     secure   uptime 
+2016-01-23 13:01:16		[tcl]
+2016-01-23 13:01:16		  tcl
+2016-01-23 13:01:16		[trigger]
+2016-01-23 13:01:16		  trigger
+2016-01-23 13:01:16		[alias]
+2016-01-23 13:01:16		  AAWAY    ANICK    CHAT     IG       LEAVE    N        SIGNOFF  V        WII    
+2016-01-23 13:01:16		  alias    BEEP     CL       J        M        Q        T        W        WW     
+2016-01-23 13:01:16		  AME      BYE      CLOSE    K        MSGBUF   REDRAW   UB       WC     
+2016-01-23 13:01:16		  AMSG     C        EXIT     KB       MUB      SAY      UMODE    WI     
+2016-01-23 13:01:16		[aspell]
+2016-01-23 13:01:16		  aspell
+2016-01-23 13:01:16		[charset]
+2016-01-23 13:01:16		  charset
+2016-01-23 13:01:16		[xfer]
+2016-01-23 13:01:16		  me  xfer
+2016-01-23 13:01:16		[relay]
+2016-01-23 13:01:16		  relay
+2016-01-23 13:01:16		[script]
+2016-01-23 13:01:16		  script
+2016-01-23 13:01:16		[exec]
+2016-01-23 13:01:16		  exec
+2016-01-23 13:01:16		[guile]
+2016-01-23 13:01:16		  guile
+2016-01-23 13:01:16		[logger]
+2016-01-23 13:01:16		  logger
+2016-01-23 13:01:16		[python]
+2016-01-23 13:01:16		  listbuffer  python
+2016-01-23 13:01:16		[lua]
+2016-01-23 13:01:16		  lua
+2016-01-23 13:01:16		[ruby]
+2016-01-23 13:01:16		  ruby
+2016-01-23 13:01:16		[irc]
+2016-01-23 13:01:16		  admin       deop        kick        msg         query       sapart      topic       who       
+2016-01-23 13:01:16		  allchan     devoice     kickban     names       quiet       saquit      trace       whois     
+2016-01-23 13:01:16		  allpv       die         kill        nick        quote       server      unban       whowas    
+2016-01-23 13:01:16		  allserv     disconnect  links       notice      reconnect   service     unquiet   
+2016-01-23 13:01:16		  ban         halfop      list        notify      rehash      servlist    userhost  
+2016-01-23 13:01:16		  connect     ignore      lusers      op          remove      squery      users     
+2016-01-23 13:01:16		  ctcp        info        map         oper        restart     squit       version   
+2016-01-23 13:01:16		  cycle       invite      me          part        sajoin      stats       voice     
+2016-01-23 13:01:16		  dcc         ison        mode        ping        samode      summon      wallchops 
+2016-01-23 13:01:16		  dehalfop    join        motd        pong        sanick      time        wallops   
+2016-01-23 13:01:16		[perl]
+2016-01-23 13:01:16		  buffers_detach  buffers_whitelist  perl
+2016-01-23 13:01:24		[python/listbuffer]  /listbuffer  
+2016-01-23 13:01:24		List Buffer
+2016-01-23 21:52:15		fifo: removing old fifo pipe "/home/robut/.weechat/weechat_fifo_5825"
+2016-01-23 21:52:15		python scripts loaded: listbuffer
+2016-01-23 21:52:16		perl scripts loaded: buffers
+2016-01-23 21:52:16		script: 299 scripts for WeeChat 1.3
+2016-01-23 21:52:16		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-01-23 21:52:24		perl: scripts unloaded
+2016-01-23 21:52:24		fifo: pipe closed
+2016-01-23 21:52:24		python: scripts unloaded

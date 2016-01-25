@@ -1,0 +1,59 @@
+2016-01-23 12:51:28	--	irc: connecting to server localhost/6667...
+2016-01-23 12:51:28	--	irc: connected to localhost/6667 (127.0.0.1)
+2016-01-23 12:51:28	--	Welcome to pickups!
+2016-01-23 12:51:28	--	You are now known as JoelCain
+2016-01-23 12:51:28	--	- pickups Message of the Day -
+2016-01-23 12:51:28	--	- insert MOTD here
+2016-01-23 12:51:28	--	End of MOTD command
+2016-01-23 12:51:51	--	MSG(nickserv): help
+2016-01-23 12:51:51	=!=	irc: reading data on socket: error 2 (connection closed by peer)
+2016-01-23 12:51:51	--	irc: disconnecting from server...
+2016-01-23 12:51:51	--	irc: disconnected from server
+2016-01-23 12:51:51	--	irc: reconnecting to server in 10 seconds
+2016-01-23 12:52:01	--	irc: reconnecting to server...
+2016-01-23 12:52:01	--	irc: connecting to server localhost/6667...
+2016-01-23 12:52:01	--	irc: connected to localhost/6667 (127.0.0.1)
+2016-01-23 12:52:01	--	Welcome to pickups!
+2016-01-23 12:52:01	--	You are now known as JoelCain
+2016-01-23 12:52:01	--	- pickups Message of the Day -
+2016-01-23 12:52:01	--	- insert MOTD here
+2016-01-23 12:52:01	--	End of MOTD command
+2016-01-23 12:57:21	--	irc: disconnected from server
+2016-01-23 12:58:22	--	irc: connecting to server localhost/6667...
+2016-01-23 12:58:22	--	irc: connected to localhost/6667 (127.0.0.1)
+2016-01-23 12:58:22	--	Welcome to pickups!
+2016-01-23 12:58:22	--	You are now known as JoelCain
+2016-01-23 12:58:22	--	- pickups Message of the Day -
+2016-01-23 12:58:22	--	- insert MOTD here
+2016-01-23 12:58:22	--	End of MOTD command
+2016-01-23 12:58:25	=!=	irc: too few arguments received from IRC server for command "321" (received: 3 arguments, expected: at least 4)
+2016-01-23 12:58:25	=!=	irc: failed to parse command "321" (please report to developers):
+2016-01-23 12:58:25	=!=	:pickups 321 JoelCain
+2016-01-23 12:58:25	--	#BenjaminLakin[d22815e](2): Hangouts conversation: Benjamin Lakin
+2016-01-23 12:58:25	--	#JoeStraub[a96882f](2): Hangouts conversation: Joe Straub
+2016-01-23 12:58:25	--	#ChrisMickey[ae61016](2): Hangouts conversation: Chris Mickey
+2016-01-23 12:58:25	--	#JamesMickey[464d3b2](2): Hangouts conversation: James Mickey
+2016-01-23 12:58:25	--	#AndrewFarley[d6c83d3](2): Hangouts conversation: Andrew Farley
+2016-01-23 12:58:25	--	#ZacharyVorwerck[ddbbc0e](2): Hangouts conversation: Zachary Vorwerck
+2016-01-23 12:58:25	--	#ChantelleMickey[ccc1b73](2): Hangouts conversation: Chantelle Mickey
+2016-01-23 12:58:25	--	#MatthewBritton[12de7c0](2): Hangouts conversation: Matthew Britton
+2016-01-23 12:58:25	--	#JoeStraub[a97755b](2): Hangouts conversation: Joe Straub
+2016-01-23 12:58:25	--	#Matthew_Chris[ada7452](3): Hangouts conversation: Matthew, Chris
+2016-01-23 12:58:25	--	#Matthew_Zachary_Chris_Benjamin[79dcd87](5): Hangouts conversation: Matthew, Zachary, Chris, Benjamin
+2016-01-23 12:58:25	--	End of /LIST
+2016-01-23 12:58:53	--	79dcd87: Channel not found
+2016-01-23 12:59:58	=!=	irc: too few arguments received from IRC server for command "321" (received: 3 arguments, expected: at least 4)
+2016-01-23 12:59:58	=!=	irc: failed to parse command "321" (please report to developers):
+2016-01-23 12:59:58	=!=	:pickups 321 JoelCain
+2016-01-23 12:59:58	--	#BenjaminLakin[d22815e](2): Hangouts conversation: Benjamin Lakin
+2016-01-23 12:59:58	--	#JoeStraub[a96882f](2): Hangouts conversation: Joe Straub
+2016-01-23 12:59:58	--	#ChrisMickey[ae61016](2): Hangouts conversation: Chris Mickey
+2016-01-23 12:59:58	--	#JamesMickey[464d3b2](2): Hangouts conversation: James Mickey
+2016-01-23 12:59:58	--	#AndrewFarley[d6c83d3](2): Hangouts conversation: Andrew Farley
+2016-01-23 12:59:58	--	#ZacharyVorwerck[ddbbc0e](2): Hangouts conversation: Zachary Vorwerck
+2016-01-23 12:59:58	--	#ChantelleMickey[ccc1b73](2): Hangouts conversation: Chantelle Mickey
+2016-01-23 12:59:58	--	#MatthewBritton[12de7c0](2): Hangouts conversation: Matthew Britton
+2016-01-23 12:59:58	--	#JoeStraub[a97755b](2): Hangouts conversation: Joe Straub
+2016-01-23 12:59:58	--	#Matthew_Chris[ada7452](3): Hangouts conversation: Matthew, Chris
+2016-01-23 12:59:58	--	#Matthew_Zachary_Chris_Benjamin[79dcd87](5): Hangouts conversation: Matthew, Zachary, Chris, Benjamin
+2016-01-23 12:59:58	--	End of /LIST
