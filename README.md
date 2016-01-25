@@ -3,15 +3,15 @@ This is just a collection of my user specific configuration files (not system-wi
 I created this repository more for my own convenience than anything,
 but I will try to provide limited support if you need it.
 ##Installation
-1. Clone the git repository into your home folder.
+- Clone the git repository into your home folder.
 ``` bash
 cd ~
 git clone https://github.com/therobut/dotfiles.git
 ```
-2. Edit the tools-\<distro\>.txt file that is relevant to you. This is a simple text file with a list of packages you want to be
-installed by the distro's package manager. Put each package on its own line. In the case of a package group, follow the group name by a blank line. "tools-arch.txt" has both the 'base-devel' and 'i3' package groups that exemplify this. Currently only Arch Linux's pacman is fully supported. Use the others at your own risk.
 
-3. Run the install script.
+- Edit the tools-\<distro\>.txt file that is relevant to you. This is a simple text file with a list of packages you want to be installed by the distro's package manager. Put each package on its own line. In the case of a package group, follow the group name by a blank line. "tools-arch.txt" has both the 'base-devel' and 'i3' package groups that exemplify this. Currently only Arch Linux's pacman is fully supported. Use the others at your own risk.
+
+- Run the install script.
 ``` bash
 cd ~/dotfiles
 ./install
