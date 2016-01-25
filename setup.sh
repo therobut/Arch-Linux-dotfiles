@@ -78,6 +78,8 @@ chsh_zsh () {
     fi
 }
 
+echo "Attempting to install tools from tools-$distro.txt"
+
 if [ -f tools-$distro.txt ]; then
     while read tool
     do
