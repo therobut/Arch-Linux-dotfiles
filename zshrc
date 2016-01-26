@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/dotfiles/oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
+ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -10,7 +11,7 @@ ZSH_THEME="bira"
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export GOPATH=$HOME/gocode
+#export GOPATH=$HOME/gocode
 export TERMINAL=termite
 export VISUAL=vim
 export EDITOR=vim

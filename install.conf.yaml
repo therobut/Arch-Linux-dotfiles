@@ -12,6 +12,12 @@
         create: true
         relink: true
         path: config/i3status/
+    ~/.oh-my-zsh:
+        relink: true
+        path: oh-my-zsh/
+    ~/.oh-my-zsh-custom:
+        relink: true
+        path: oh-my-zsh-custom/
     ~/.config/termite:
         create: true
         relink: true
