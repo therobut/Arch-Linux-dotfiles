@@ -184,6 +184,7 @@ bar {
 }
 
 exec termite
+exec google-chrome-stable --no-startup-window
 
 # vim:filetype=i3
 
