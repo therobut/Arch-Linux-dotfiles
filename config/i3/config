@@ -174,7 +174,7 @@ bar {
         position        top
   colors {
     separator #666666
-    background #000000
+    background #0c0d0e
     statusline #c390d4
     focused_workspace #653d8a #653d8a #ffffff
     active_workspace #333333 #5f676a #ffffff
