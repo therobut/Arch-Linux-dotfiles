@@ -1,0 +1,7 @@
+irc.conf
+weechat.conf
+weeget
+*log*
+script/*
+chanop_mode_cache.dat
+ssl/*
