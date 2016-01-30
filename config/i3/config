@@ -111,6 +111,7 @@ assign [class="custom-vim"] $WS3
 assign [class="google-chrome" instance="crx_chlffgpmiacpedhhbkiomidkjlcfhogd"] $WS4
 assign [class="google-chrome"] $WS2
 assign [class="custom-weechat"] $WS4
+assign [class="custom-hangups"] $WS4
 #assign [class="Termite" id="0x1800003"] $WS4
 
 # switch to workspace
@@ -188,6 +189,7 @@ bar {
 
 exec termite
 exec google-chrome-stable --no-startup-window
+exec termite --class=custom-hangups -e hangups
 
 # vim:filetype=i3
 
