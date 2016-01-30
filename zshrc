@@ -16,13 +16,15 @@ export TERMINAL=termite
 export VISUAL=vim
 export EDITOR=vim
 export PAGER=vimpager
+export BROWSER=google-chrome-stable
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias aur="yaourt"
-alias vim='gnome-terminal -x vim'
+alias aur=yaourt
+alias vim=vim-termite
 alias less=$PAGER
+alias weechat='termite --class=custom-weechat -e weechat &'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

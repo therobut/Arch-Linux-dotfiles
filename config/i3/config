@@ -102,13 +102,16 @@ workspace_layout tabbed
 set $WS1 "1: term"
 set $WS2 "2: www"
 set $WS3 "3: vim"
-set $WS4 "4: irc"
+set $WS4 "4: comms"
 
 # client workspace assignments
-assign [class="Gnome-terminal" title="VIM"] $WS3
-for_window [title="VIM: "] move workspace $WS3
-assign [class="Gnome-terminal" title='Irssi:'] $WS4
-for_window [title='Irssi:'] move workspace $WS4
+# first match wins. Example: pushbullet definition must come before general chrome definition
+assign [class="custom-vim"] $WS3
+#Pushbullet
+assign [class="google-chrome" instance="crx_chlffgpmiacpedhhbkiomidkjlcfhogd"] $WS4
+assign [class="google-chrome"] $WS2
+assign [class="custom-weechat"] $WS4
+#assign [class="Termite" id="0x1800003"] $WS4
 
 # switch to workspace
 bindsym $mod+1 workspace $WS1
