@@ -23,7 +23,7 @@ setup.sh tries to automatically detect which distribution you are running, and a
 install the tools you specified by using the apropriate package manager. 
 If setup.sh does not work with your distro, feel free
 to fork the repo and send me a pull request with the updated code. If you would like ME to 
-add support for your distro, help me out by sending me the following information.
+add support for your distro, help me out by giving the following information in a new issue.
 * Command to install packages via your package manager (ex: sudo pacman -S zsh)
 * Contents of '/etc/os-release'
 
