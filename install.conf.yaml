@@ -12,6 +12,10 @@
         create: true
         relink: true
         path: config/i3status/
+    ~/.config/hangups:
+        create: true
+        relink: true
+        path: config/hangups/
     ~/.oh-my-zsh:
         relink: true
         path: oh-my-zsh/
