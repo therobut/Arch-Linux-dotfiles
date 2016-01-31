@@ -9,6 +9,7 @@
 # 1 - not running linux
 # 2 - could not determine Linux distro
 # 3 - could not find relevant tools-<distro>.txt file
+# 4 - unable to find/install yaourt
 ############################
 
 ########## Variables
@@ -50,7 +51,7 @@ install_tool () {
     
     case $distro in
         'arch')
-            sudo pacman -S --noconfirm $1
+            yaourt -S --noconfirm $1
             ;;
         'ubuntu')
             sudo aptitude install $1
@@ -65,6 +66,14 @@ install_tool () {
     esac
 }
 
+yogurt_check() {
+    if hash yaourt 2>/dev/null; then
+        return 0
+    else
+        return 1
+    fi
+}
+
 chsh_zsh () {
     # Test to see if zshell is installed.  If it is:
     if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
@@ -77,6 +86,42 @@ chsh_zsh () {
         chsh_zsh
     fi
 }
+
+if [ $distro == "arch" ]; then
+    if yogurt_check; then
+        yogurt=true
+    else
+        echo "Yaourt not detected. Attempting to install."
+
+        # Install Yaourt
+        sudo pacman -S --noconfirm base-devel
+
+        #package-query (yaourt dependency)
+        git clone https://aur.archlinux.org/package-query.git
+        cd package-query
+        makepkg -si
+        cd ..
+        rm -rf package-query
+
+        #yaourt
+        git clone https://aur.archlinux.org/yaourt.git
+        cd yaourt
+        makepkg -si
+        cd ..
+        rm -rf yaourt
+
+        if yogurt_check; then
+            yogurt=true
+            echo "Yaourt installation successful!"
+        else
+            echo "Yaourt installation failed. Please install manually and re-run setup.sh"
+            echo "Yaourt homepage and install instructions: https://archlinux.fr/yaourt-en"
+            return 4
+        fi
+    fi
+else
+    echo "Not Arch Linux. Skipping yaourt installation."
+fi
 
 echo "Attempting to install tools from tools-$distro.txt"
 
