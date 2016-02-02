@@ -4,6 +4,7 @@ i3
  
 dmenu
 gvim
+hangups
 termite
 vim-runtime
 weechat
