@@ -31,10 +31,10 @@ color4  = #3182bd
 color12 = #3182bd
 
 # magenta
-#color5  = #653d8a
-#color13 = #653d8a
-color5  = #c390d4
-color13 = #c390d4
+color5  = #653d8a
+color13 = #653d8a
+#color5  = #c390d4
+#color13 = #c390d4
 
 # cyan
 color6  = #80b1d3
