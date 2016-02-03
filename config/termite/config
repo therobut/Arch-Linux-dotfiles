@@ -1,5 +1,6 @@
 [options]
 font = Inconsolata 14
+browser = google-chrome-stable
 
 [colors]
 

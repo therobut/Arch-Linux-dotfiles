@@ -16,7 +16,7 @@ export TERMINAL=termite
 export VISUAL=vim
 export EDITOR=vim
 export PAGER=vimpager
-export BROWSER=google-chrome-stable
+#export BROWSER=/usr/bin/google-chrome-stable
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
