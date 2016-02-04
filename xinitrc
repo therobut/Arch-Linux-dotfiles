@@ -13,6 +13,7 @@ fi
 
 # Generate i3 host-specific i3 config
 $HOME/.config/i3/i3-config-splice.sh > $HOME/.config/i3/config
+$HOME/.config/i3status/i3status-config-splice.sh > $HOME/.config/i3status/config
 
 exec i3
 
