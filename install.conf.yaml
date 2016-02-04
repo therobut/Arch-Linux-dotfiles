@@ -38,9 +38,12 @@
     ~/.xinitrc:
         relink: true
         path: xinitrc
-    ~/.zprofile:
+    ~/.zlogin:
         relink: true
-        path: zprofile
+        path: zlogin
+    ~/.zshenv:
+        relink: true
+        path: zshenv
     ~/.zshrc:
         relink: true
         path: zshrc

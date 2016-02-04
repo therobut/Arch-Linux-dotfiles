@@ -5,15 +5,6 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 # Set name of the theme to load.
 ZSH_THEME="bira"
 
-# User configuration
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-#export GOPATH=$HOME/gocode
-export TERMINAL=termite
-export VISUAL=vim
-export EDITOR=vim
-export PAGER=vimpager
-
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
