@@ -1,14 +1,7 @@
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
-
 set $mod Mod4
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below. ISO 10646 = Unicode
+# Fonts
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, if you need a lot of unicode glyphs or
-# right-to-left text rendering, you should instead use pango for rendering and
-# chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -27,7 +20,6 @@ bindsym $mod+Control+l exec i3lock
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-#bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Return exec termite
 
 # chrome browser
@@ -38,10 +30,6 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 # changed to match vim
@@ -112,7 +100,6 @@ assign [class="google-chrome" instance="crx_chlffgpmiacpedhhbkiomidkjlcfhogd"] $
 assign [class="google-chrome"] $WS2
 assign [class="custom-weechat"] $WS4
 assign [class="custom-hangups"] $WS4
-#assign [class="Termite" id="0x1800003"] $WS4
 
 # switch to workspace
 bindsym $mod+1 workspace $WS1
@@ -150,12 +137,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
@@ -194,9 +175,9 @@ exec --no-startup-id i3-msg "workspace $WS1; exec termite"
 exec google-chrome-stable --no-startup-window
 exec termite --class=custom-hangups -e hangups
 
-# vim:filetype=i3
-
 client.focused #653d8a #653d8a #ffffff #662b9c
 client.focused_inactive #333333 #5f676a #ffffff #484e50
 client.unfocused #222222 #222222 #888888 #292d2e
 client.urgent #2f343a #d14d4d #ffffff #900000
+
+# vim:filetype=i3
