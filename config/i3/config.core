@@ -16,7 +16,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 #lock screen
-bindsym $mod+Control+l exec i3lock
+bindsym $mod+Control+l exec i3lock-screenshot
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
@@ -129,7 +129,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+m move workspace to output right
 
 # reload the configuration file
-bindsym $mod+Shift+c exec "i3-reload.sh"
+bindsym $mod+Shift+c exec i3-reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)

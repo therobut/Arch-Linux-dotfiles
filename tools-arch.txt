@@ -5,6 +5,8 @@ i3
 dmenu
 gvim
 hangups-git
+imagemagick
+scrot
 termite
 vim-runtime
 weechat
