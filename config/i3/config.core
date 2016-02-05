@@ -16,7 +16,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 #lock screen
-bindsym $mod+Control+l exec i3lock-screenshot
+bindsym $mod+Control+l exec ~/bin/i3lock-screenshot
 
 #take a screenshot
 bindsym Print exec scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f ~/screenshots/'
@@ -132,7 +132,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+m move workspace to output right
 
 # reload the configuration file
-bindsym $mod+Shift+c exec i3-reload
+bindsym $mod+Shift+c exec ~/bin/i3-reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
