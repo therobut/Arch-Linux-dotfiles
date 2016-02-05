@@ -1,6 +1,7 @@
 [options]
 font = Inconsolata 14
 browser = google-chrome-stable
+geometry = 1800x900
 
 [colors]
 
