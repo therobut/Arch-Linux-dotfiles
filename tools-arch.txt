@@ -3,6 +3,7 @@ base-devel
 i3
  
 dmenu
+feh
 gvim
 hangups-git
 imagemagick
