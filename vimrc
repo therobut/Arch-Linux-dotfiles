@@ -84,6 +84,8 @@ Plugin 'VundleVim/Vundle.vim'
 """ Add bundles (plugins) here """
 Plugin 'crusoexia/vim-monokai'
 Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'fatih/vim-go'
+Plugin 'digitaltoad/vim-pug'
 
 """ End Bundles """
 call vundle#end()
@@ -101,8 +103,12 @@ syntax enable             " enable syntax highlighting (previously syntax on).
 colorscheme monokai       " set colorscheme
 
 " Prettify JSON files
-autocmd BufRead,BufNewFile *.json set filetype=json
-autocmd Syntax json sou ~/.vim/syntax/json.vim
+"autocmd BufRead,BufNewFile *.json set filetype=json
+"autocmd Syntax json sou ~/.vim/syntax/json.vim
+
+" Syntax highlighting for .amber and .jade files
+autocmd BufRead,BufNewFile *.amber set filetype=pug
+autocmd BufRead,BufNewFile *.jade set filetype=pug
 
 " Prettify Vagrantfile
 autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
