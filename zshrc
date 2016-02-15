@@ -13,9 +13,6 @@ alias vim=vim-termite
 alias less=$PAGER
 alias weechat='termite --class=custom-weechat -e weechat &'
 
-# fix ls colors and such
-eval $(dircolors ~/.dircolors)
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
