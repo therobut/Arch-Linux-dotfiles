@@ -12,6 +12,7 @@ alias aur=yaourt
 alias vim=vim-termite
 alias less=$PAGER
 alias weechat='termite --class=custom-weechat -e weechat &'
+alias slideshow='feh -z -F -D 5 --zoom max'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
