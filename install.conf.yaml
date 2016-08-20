@@ -49,7 +49,7 @@
         path: zshrc
 
 - shell:
-    - [mkdir ~/screenshots]
+    - [mkdir -p ~/pictures/screenshots]
     - [git submodule update --init --recursive, Installing submodules]
     - [git config --global core.editor "vim", Setting git defaults]
     - [git config --global core.autocrlf input]
