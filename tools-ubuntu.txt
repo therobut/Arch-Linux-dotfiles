@@ -1,0 +1,4 @@
+scrot
+vim-gnome
+weechat
+zsh
