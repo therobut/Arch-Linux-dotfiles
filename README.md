@@ -1,3 +1,5 @@
+##Refactoring some things... not everything will work automatically at the moment.
+
 #Robut's Linux dot files
 This is just a collection of my user specific configuration files (not system-wide settings).
 I created this repository more for my own convenience than anything,
